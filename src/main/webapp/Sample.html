@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+      // var xobj = new XMLHttpRequest();
+      // xobj.overrideMimeType("application/json");
+      // xobj.open('GET', 'C:/Users/jbeagle/Desktop/Projects/Senior%20Project/JSON_Stores_Database.json', true);
+      // xobj.onreadystatchange = function () {
+      //   if (xobj.readyState == 4 && xobj.status == "200") {
+      //     callback(xobj.responseText);
+      //     console.log(xobj.responseText);
+      //   }
+      // };
+      // xobj.send(null);
+      $.getJSON("JSON_Stores_Database.json", function(json) {
+        console.log(json);
+        $(".content").text(json);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="content"></div>
+  </body>
+</html>
